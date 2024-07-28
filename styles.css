@@ -1,0 +1,227 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.light-theme {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+header {
+    background-color: #1E3A8A; /* Deep Blue */
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s;
+}
+
+.light-theme header {
+    background-color: #1E3A8A;
+}
+
+.dark-theme header {
+    background-color: #333;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+main {
+    padding-top: 80px;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1E3A8A; /* Deep Blue */
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #162A6E;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: slideIn 1s;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.plan {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 2rem;
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.light-theme .plan {
+    background-color: white;
+}
+
+.dark-theme .plan {
+    background-color: #2a2a2a;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+}
+
+.plan .price {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+footer p {
+    margin: 0;
+}
+
+.theme-switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.theme-switch input[type="checkbox"] {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.switch:before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.5s;
+}
+
+input[type="checkbox"]:checked + .switch {
+    background-color: #1E3A8A; /* Deep Blue */
+    box-shadow: 0 0 10px #1E3A8A;
+}
+
+input[type="checkbox"]:checked + .switch:before {
+    transform: translateX(20px);
+}
+
+/* Centering the buttons */
+#home .container,
+#support .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home .btn,
+#support .btn {
+    margin-top: 1rem;
+}
+#appuzlota {
+    color: #122;
+}
